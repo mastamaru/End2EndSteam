@@ -97,7 +97,7 @@ with st.container():
         st.markdown("<h3 style='text-align: center'>Topic Modelling dan Ringkasan untuk Sentimen Positif</h3>", unsafe_allow_html=True)
 
 
-        st.write("Dari keseluruhan ulasan positif yang diberikan oleh para pemain, kami menggunakan topic modelling dengan LDA untuk mendapatkan 5 topik utama yang muncul dari ulasan tersebut. Topik tersebut dapat menjadi ide untuk pengembangan fitur game lebih lanjut. Berikut ini adalah 5 topik yang dihasilkan dari pemodelan menggunakan LDA :")
+        st.write("Dalam memahami nuansa ulasan positif dari para pemain, kami menerapkan model Latent Dirichlet Allocation (LDA) untuk mendapatkan pola dan topik yang dominan. Lima topik teratas ini dapat memberikan wawasan mengenai aspek-aspek pada game yang paling diapresiasi oleh para pemain. Hal ini dapat digunakan oleh para developer untuk melakukan inovasi terhadap fitur tersebut ataupun mengadakan event yang dapat memberikan pengalaman yang lebih berkesan bagi para pengguna dengan melibatkan aspek tersebut. Berikut adalah 5 topik yang muncul dari proses pemodelan topik :")
         st.latex(r'''
                  \begin{align*}
                  \text{Topic 1} & = \text{game feel character sandrock story time portia combat quest play} \\
@@ -107,7 +107,7 @@ with st.container():
                  \text{Topic 5} & = \text{game time character story feel lot portia commission item play} \\
                  \end{align*}
                  ''')
-        st.write("Kemudian, kami menggunakan topic text yang dihasilkan dari LDA untuk membuat ringkasan dari setiap topik yang muncul. Berikut adalah ringkasan dari setiap topik yang muncul :")
+        st.write("Untuk memberikan konteks yang lebih jelas dari topik-topik tersebut, kami melakukan peringkasan teks dengan mengandalkan model Facebook/BART-large-cnn terhadap topik teks yang dihasilkan oleh model LDA. Hal ini memungkinkan kami untuk menjelaskan arti dari topik yang dihasilkan secara lebih jelas. Berikut ini adalah intisari dari 5 topik yang telah kami rangkum :")
         with st.expander("Ringkasan Topik 1, Pengalaman dan Narasi yang Menarik "):
             st.markdown(""" 
                         Para pemain menyoroti elemen gameplay yang menarik, seperti "farming" dan "building". Mereka menikmati
@@ -174,7 +174,7 @@ with st.container():
                  ''')
         
         # summarize
-        st.write("Kemudian, kami menggunakan topic text yang dihasilkan dari LDA untuk membuat ringkasan dari setiap topik yang muncul. Berikut adalah ringkasan dari setiap topik yang muncul :")
+        st.write("Kemudian dengan menggunakan teks topik yang dihasilkan oleh model LDA, kami menerapkan teknik text summarization dengan memanfaatkan pretrained model berbasis BART, yakni Facebook/BART-large-cnn. Model tersebut memungkinkan kami untuk mendapatkan ringkasan yang jelas dari setiap topik. Berikut ini adalah esensi dari masing-masing topik yang telah diringkas :")
         with st.expander("Ringkasan Topik 1, Masalah Teknis dan Pengalaman Bermain "):
             st.markdown(""" 
                         Pemain mengalami masalah teknis yang berulang, termasuk bug, crash dalam gameplay yang memengaruhi transisi adegan dan saat memulai game. 
