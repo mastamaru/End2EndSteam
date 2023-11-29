@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 
 
 # Load data
-daily_sentiment = pd.read_csv('./data/daily_sentiment.csv')
+daily_sentiment = pd.read_csv('./dashboard/data/daily_sentiment.csv')
 daily_sentiment['time'] = pd.to_datetime(daily_sentiment['time'])
 daily_sentiment = daily_sentiment.set_index('time')
-df_positive = pd.read_csv('./data/positive_reviews.csv')
-df_negative = pd.read_csv('./data/negative_reviews.csv')
+df_positive = pd.read_csv('./dashboard/data/positive_reviews.csv')
+df_negative = pd.read_csv('./dashboard/data/negative_reviews.csv')
 
 # Set up page
-st.set_page_config(layout="wide", page_title='My Time at Sandrock Dashboard', page_icon='icon sandrock.png')
+st.set_page_config(layout="wide", page_title='My Time at Sandrock Dashboard', page_icon='./dashboard/icon sandrock.png')
 
 # Judul
 st.markdown("<h1 style='text-align: center; color: black;'>Business Intelligence Dashboard for <span style='color:green'> My Time at Sandrock </span></h1>", unsafe_allow_html=True)
@@ -65,7 +65,7 @@ with st.container():
         st.write(df_positive.loc[:, ['time', 'review', ]])
 
         st.markdown("<h3 style='text-align: center'>Wordcloud Sentimen Positif</h3>", unsafe_allow_html=True)
-        st.image('wordcloud_positive.png', use_column_width=True)
+        st.image('./dashboard/wordcloud_positive.png', use_column_width=True)
 
         with st.expander("Aspek Positif yang Disoroti oleh Pemain"):
             st.markdown("""
@@ -150,7 +150,7 @@ with st.container():
 
 
         st.markdown("<h3 style='text-align: center'>Wordcloud Sentimen Negatif</h3>", unsafe_allow_html=True)
-        st.image('wordcloud_negative.png', use_column_width=True)
+        st.image('./dashboard/wordcloud_negative.png', use_column_width=True)
 
         with st.expander("Area untuk Perbaikan dan Pengembangan"):
             st.markdown("""
