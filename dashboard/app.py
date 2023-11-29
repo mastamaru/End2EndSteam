@@ -1,11 +1,6 @@
 import pandas as pd
-import numpy as np
-import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib.dates as mdates
-from streamlit_autorefresh import st_autorefresh
 
 
 # Load data
@@ -17,7 +12,6 @@ df_negative = pd.read_csv('./data/negative_reviews.csv')
 
 # Set up page
 st.set_page_config(layout="wide", page_title='My Time at Sandrock Dashboard', page_icon='icon sandrock.png')
-st_autorefresh(interval=5000, key=5)
 
 # Judul
 st.markdown("<h1 style='text-align: center; color: black;'>Business Intelligence Dashboard for <span style='color:green'> My Time at Sandrock </span></h1>", unsafe_allow_html=True)
