@@ -162,7 +162,7 @@ with st.container():
                         atau antarmuka pengguna yang memerlukan peningkatan intuitif. 
             """)
 
-        st.write("Dari keseluruhan ulasan negatif yang diberikan oleh para pemain, kami menggunakan topic modelling dengan LDA untuk mendapatkan 5 topik utama yang muncul dari ulasan tersebut. Topik tersebut dapat menjadi ide untuk evaluasi terhadap game oleh developer. Berikut ini adalah 5 topik yang dihasilkan dari pemodelan menggunakan LDA :")
+        st.write("Dari data ulasan negatif yang kami analisis, kami menerapkan model Latent Dirichlet Allocation (LDA) untuk mengidentifikasi lima topik yang sering muncul. Topik-topik ini dapat memberi wawasan tentang masalah umum yang dihadapi oleh para pemain, yang dapat digunakan sebagai titik fokus dari pengembang untuk melakukan perbaikan / evaluasi. Berikut adalah 5 topik yang dihasilkan melalui proses pemodelan topik :")
         st.latex(r'''
                  \begin{align*}
                  \text{Topic 1} & = \text{game time day bug teleport play workshop bad quest mtap} \\
